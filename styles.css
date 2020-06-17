@@ -1,4 +1,17 @@
 
+
+#myProgress {
+  width: 100%;
+  background-color: grey;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: green;
+}
+
+
 .btn {
   border: 2px solid black;
   border-radius: 5px;
@@ -125,15 +138,4 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
-}
-
-#myProgress {
-  width: 100%;
-  background-color: grey;
-}
-
-#myBar {
-  width: 1%;
-  height: 30px;
-  background-color: green;
 }
