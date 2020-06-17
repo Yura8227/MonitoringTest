@@ -27,8 +27,29 @@
             fetch("https://lpb2pszwab.execute-api.ap-northeast-2.amazonaws.com/dev", requestOptions)
             .then(response => response.text())
             .then(result => alert(JSON.parse(result).body))
-            .catch(error => console.log('error', error));
+            .catch(error => console.log('error', error));			
         }
+		var i=0;
+		function move()
+		{
+			if(i==0)
+			{
+				i =1;
+				var elem = document.getElementById("myBar");
+				var width =1;
+				var id = setInterval(frame,10);
+				function frame(){
+					if(width >=100)
+					{
+						clearInterval(id);
+						i=0;
+					}else{
+						width++;
+						ele,style.width = width + "%";\
+					}
+				}
+			}
+		}
     </script>
 </head>
 
@@ -70,7 +91,7 @@ Total Progress
   <div id="myBar"></div>
 </div>
 <br>
-<button class="btn default">RUN</button>
+<button class="btn default" onclick="move()">RUN</button>
 <br><br>
 
  <table border="0" width="600" height="400" align ="left" style="border-collapse:collapse" background="WF-background.jpg">	
@@ -84,10 +105,10 @@ Total Progress
 		<br>
 			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
-		<td rowspan="2"><button class="btn ip11" align = "center">IP 2-2</button><br>
+		<td><button class="btn ip22" align = "center">IP 2-2</button><br>
 			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
-		<td><button class="btn ip11" align = "center">IP 2-3</button><br>
+		<td><button class="btn ip22" align = "center">IP 2-3</button><br>
 			<div id="myProgress"><div id="myBar"></div></div></td>	    
 	</tr><!-- 첫번째 줄 끝 -->
 	<tr></tr>
@@ -102,21 +123,21 @@ Total Progress
 	</tr><!-- 두번째 줄 끝 -->
 	<tr></tr>
 	<tr><!-- 세번째 줄 시작 -->
-	    <td><button class="btn ip11" align = "center">IP 3-1</button><br>
+	    <td><button class="btn ip3" align = "center">IP 3-1</button><br>
 			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
-		<td><button class="btn ip11" align = "center">IP 2-1</button><br>
+		<td><button class="btn ip22" align = "center">IP 2-1</button><br>
 			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
-		<td><button class="btn ip11" align = "center">IP 2-4</button><br>
+		<td><button class="btn ip22" align = "center">IP 2-4</button><br>
 			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
-		<td><button class="btn ip11" align = "center">IP 3-3</button><br>
+		<td><button class="btn ip33" align = "center">IP 3-3</button><br>
 			<div id="myProgress"><div id="myBar"></div></div></td>	    
 	</tr><!-- 세번째 줄 끝 -->
 	<tr></tr>
 	<tr><!-- 네번째 줄 시작 -->
-	    <td><button class="btn ip11" align = "center">IP 3-2</button><br>
+	    <td><button class="btn ip33" align = "center">IP 3-2</button><br>
 			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
 		<td></td>

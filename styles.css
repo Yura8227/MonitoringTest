@@ -127,12 +127,12 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.myProgress {
+#myProgress {
   width: 100%;
   background-color: grey;
 }
 
-.myBar {
+#myBar {
   width: 1%;
   height: 30px;
   background-color: green;
