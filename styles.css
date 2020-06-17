@@ -4,10 +4,11 @@
   border-radius: 5px;
   background-color: white;
   color: black;
-  padding: 14px 28px;
-  font-size: 16px;
+  padding: 14px 28px;  
   cursor: pointer;
+  font-size: 24px;
 }
+
 
 /* Green */
 .ip11 {
@@ -21,14 +22,46 @@
 }
 
 /* Blue */
-.info {
+.ip22 {
   border-color: #2196F3;
   color: dodgerblue
 }
 
-.info:hover {
+.ip22:hover {
   background: #2196F3;
   color: white;
+}
+
+/* Orange */
+.ip3 {
+  border-color: #ff9800;
+  color: orange;
+}
+
+.ip3:hover {
+  background: #ff9800;
+  color: white;
+}
+
+/* Red */
+.ip33 {
+  border-color: #f44336;
+  color: red
+}
+
+.ip33:hover {
+  background: #f44336;
+  color: white;
+}
+
+/* Gray */
+.default {
+  border-color: #e7e7e7;
+  color: black;
+}
+
+.default:hover {
+  background: #e7e7e7;
 }
 
 /* The switch - the box around the slider */
