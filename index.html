@@ -10,26 +10,25 @@
 <body>
 <h1> Welcome Test site</h1>
 
-<p>This is a paragraph.</p>
+<!--<p>This is a paragraph.</p>-->
 
-<video width="320" height="240" controls>
+<!--<video width="320" height="240" controls>
   <source src="20200520_162656_HoloLens.mp4" type="video/mp4">  
 Your browser does not support the video tag.
-</video>
+</video>-->
 <br>
-<button type="button">Click Me!</button>
 <br>
 <!-- Rectangular switch -->
-<label class="switch">
+<!--<label class="switch">
   <input type="checkbox">
   <span class="slider"></span>
-</label>
+</label>-->
 
 <!-- Rounded switch -->
-<label class="switch">
+<!--<label class="switch">
   <input type="checkbox">
   <span class="slider round"></span>
-</label>
+</label>-->
 
 
 <br><br>
@@ -39,21 +38,30 @@ Your browser does not support the video tag.
 
 <br><br>
 
- <table border="0" width="800" height="600" align ="center" style="border-collapse:collapse">	
+ <table border="0" width="600" height="400" align ="center" style="border-collapse:collapse">	
 	<tr><!-- 첫번째 줄 시작 -->
-	    <td><button class="btn ip11">IP 1-3</button></td>
+	    <td><button class="btn ip11">IP 1-3</button>
+			<br>
+			<div id="myProgress"><div id="myBar"></div></div>
+		</td>
 		<td></td>
-		<td><button class="btn ip11">IP 1-1</button></td>
+		<td><button class="btn ip11">IP 1-1</button>
+		<br>
+			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
-		<td><button class="btn ip11">IP 2-2</button></td>
+		<td><button class="btn ip11">IP 2-2</button><br>
+			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
-		<td><button class="btn ip11">IP 2-3</button></td>	    
+		<td><button class="btn ip11">IP 2-3</button><br>
+			<div id="myProgress"><div id="myBar"></div></div></td>	    
 	</tr><!-- 첫번째 줄 끝 -->
 	<tr></tr>
 	<tr><!-- 두번째 줄 시작 -->
-	    <td><button class="btn ip11">IP 1-4</button></td>
+	    <td><button class="btn ip11">IP 1-4</button><br>
+			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
-		<td><button class="btn ip11">IP 1-2</button></td>
+		<td><button class="btn ip11">IP 1-2</button><br>
+			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -61,17 +69,22 @@ Your browser does not support the video tag.
 	</tr><!-- 두번째 줄 끝 -->
 	<tr></tr>
 	<tr><!-- 세번째 줄 시작 -->
-	    <td><button class="btn ip11">IP 3-1</button></td>
+	    <td><button class="btn ip11">IP 3-1</button><br>
+			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
-		<td><button class="btn ip11">IP 2-1</button></td>
+		<td><button class="btn ip11">IP 2-1</button><br>
+			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
-		<td><button class="btn ip11">IP 2-4</button></td>
+		<td><button class="btn ip11">IP 2-4</button><br>
+			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
-		<td><button class="btn ip11">IP 3-3</button></td>	    
+		<td><button class="btn ip11">IP 3-3</button><br>
+			<div id="myProgress"><div id="myBar"></div></div></td>	    
 	</tr><!-- 세번째 줄 끝 -->
 	<tr></tr>
 	<tr><!-- 네번째 줄 시작 -->
-	    <td><button class="btn ip11">IP 3-2</button></td>
+	    <td><button class="btn ip11">IP 3-2</button><br>
+			<div id="myProgress"><div id="myBar"></div></div></td>
 		<td></td>
 		<td></td>
 		<td></td>
@@ -81,7 +94,8 @@ Your browser does not support the video tag.
 	</tr><!-- 네번째 줄 끝 -->	
     </table>
 	
-
+<br><br>
+<button class="btn ip11">RUN</button>
 
 </body>
 </html>
