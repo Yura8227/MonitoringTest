@@ -10,12 +10,12 @@
 }
 
 /* Green */
-.success {
+.IP1-1 {
   border-color: #4CAF50;
   color: green;
 }
 
-.success:hover {
+.IP1-1:hover {
   background-color: #4CAF50;
   color: white;
 }
