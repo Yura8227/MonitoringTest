@@ -20,7 +20,7 @@ function move(){
 	}
 }
 
-toggle between hiding and showing the dropdown content */
+/*toggle between hiding and showing the dropdown content */
 function input_dropbox() {
   document.getElementById("inputDropdown").classList.toggle("show");
 }

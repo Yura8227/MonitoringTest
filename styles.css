@@ -12,7 +12,7 @@
 }
 
 
-.btn {
+.wf-btn {
   border: 2px solid black;
   border-radius: 5px;
   background-color: white;
@@ -184,3 +184,43 @@ input:checked + .slider:before {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+
+    .margin-top {
+      margin-top: 1em;
+    }
+    
+    #outlink {
+      text-decoration: underline;
+    }
+    
+    #target {
+      list-style: none;
+      -webkit-padding-start: 0;
+      -webkit-margin-after: 0;
+      -webkit-margin-before: 1em;
+      border: 1px solid #000;
+      overflow-y: auto;
+      width: 100%;
+      background: #333;
+      color: #fff;
+    }
+    
+    .tbl {
+      display: table;
+      width:100%;
+      >* {
+        display: table-row;
+        >* {
+          display: table-cell;
+          
+          &:last-child {
+            width:100%
+          }
+        }
+      }
+    }
+    
+    .container {
+      padding-top: 1em;
+    }

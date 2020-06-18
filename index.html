@@ -7,6 +7,8 @@
 	<meta charset="utf-8">
 	<title>GK4D AWS UI</title>
 	<link rel="stylesheet" href="styles.css">	
+	<link rel="stylesheet" href="bootstrap.min.css">	
+	<link rel="stylesheet" href="bootstrap-theme.min.css">	
 	<script src="script.js"></script>
 </head>
 
@@ -55,7 +57,7 @@ Total Progress
 
 <br><br>
 
-<div class="dropdown">
+<div style="width:100%" class="dropdown">
   <button onclick="input_dropbox()" class="dropbtn">Select Input</button>
   <div id="inputDropdown" class="dropdown-content">
     <a href="#">Link 1</a>
@@ -63,38 +65,46 @@ Total Progress
     <a href="#">Link 3</a>
   </div>
 </div>
-
-
- <table border="0" width="600" height="400" align ="left" style="border-collapse:collapse" background="WF-background_rev.jpg">	
+<div style="width:100%">
+<br>
+ <button><a href="3dviewer.html">3D model Viewer</a></button>
+<br>
+<br>
+</div>
+<div style="width:100%">
+<br>
+</div>
+<div style="height:450px">
+ <table border="0" width="600" height="400" align="left" background="WF-background_rev.jpg">	
 	<tr><!-- 첫번째 줄 시작 -->
-	    <td><button id="13" class="btn ip11" align = "center" onclick="">IP 1-3</button>
+	    <td><button id="btn13" class="wf-btn ip11" align="center" onclick="">IP 1-3</button>
 			<br>
 			<br>
 		</td>
 		<td></td>
-		<td><button id="11" class="btn ip11" align = "center">IP 1-1</button>
+		<td><button id="btn11" class="wf-btn ip11" align="center">IP 1-1</button>
 			<br>
 			<br>
 		</td>
 		<td></td>
-		<td><button id="22" class="btn ip22" align = "center">IP 2-2</button>
+		<td><button id="btn22" class="wf-btn ip22" align="center">IP 2-2</button>
 			<br>
 			<br>
 		</td>			
 		<td></td>
-		<td><button id="23" class="btn ip22" align = "center">IP 2-3</button>
+		<td><button id="btn23" class="wf-btn ip22" align="center">IP 2-3</button>
 			<br>
 			<br>
 		</td>
 	</tr><!-- 첫번째 줄 끝 -->
 	<tr></tr>
 	<tr><!-- 두번째 줄 시작 -->
-	    <td><button id="14" class="btn ip11" align = "center">IP 1-4</button>
+	    <td><button id="btn14" class="wf-btn ip11" align="center">IP 1-4</button>
 			<br>
 			<br>
 		</td>
 		<td></td>
-		<td><button id="12" class="btn ip11" align = "center">IP 1-2</button>
+		<td><button id="btn12" class="wf-btn ip11" align="center">IP 1-2</button>
 			<br>
 			<br>
 		</td>
@@ -103,29 +113,29 @@ Total Progress
 	</tr><!-- 두번째 줄 끝 -->
 	<tr></tr>
 	<tr><!-- 세번째 줄 시작 -->
-	    <td><button id="31" class="btn ip3" align = "center">IP 3-1</button>
+	    <td><button id="btn31" class="wf-btn ip3" align="center">IP 3-1</button>
 			<br>
 			<br>
 		</td>
 		<td></td>
-		<td><button id="21" class="btn ip33" align = "center">IP 2-1</button>
+		<td><button id="btn21" class="wf-btn ip33" align="center">IP 2-1</button>
 			<br>
 			<br>
 		</td>
 		<td></td>
-		<td><button id="24" class="btn ip33" align = "center">IP 2-4</button>
+		<td><button id="btn24" class="wf-btn ip33" align="center">IP 2-4</button>
 			<br>
 			<br>
 		</td>
 		<td></td>
-		<td><button id="33" class="btn ip33" align = "center">IP 3-3</button>
+		<td><button id="btn33" class="wf-btn ip33" align="center">IP 3-3</button>
 			<br>
 			<br>
 		</td>
 	</tr><!-- 세번째 줄 끝 -->
 	<tr></tr>
 	<tr><!-- 네번째 줄 시작 -->
-	    <td><button id="32" class="btn ip3" align = "center">IP 3-2</button>
+	    <td><button id="btn32" class="wf-btn ip3" align="center">IP 3-2</button>
 			<br>
 			<br>
 		</td>
@@ -137,11 +147,108 @@ Total Progress
 		<td></td>	    
 	</tr><!-- 네번째 줄 끝 -->	
  </table>
- 
+ </div>
  <br>
  
  
- <button><a href="3dviewer.html">3D model Viewer</a></button>
+ <!-- reference by https://alorel.github.io/console-log-html/-->
+ <div class="container"> 
+ <script>
+  // The text we're logging
+   var text = document.getElementById("text"),
+     // The checkbox
+     onlyConsole = document.getElementById("onlyConsole"),
+     // The target <ul>
+     target = document.getElementById("target"),
+     // The buttons on the left
+     buttons = document.querySelectorAll(".list-group-item"),
+     // Our button click listener
+     buttonListener = function() {
+       var target = onlyConsole.checked ? console.skipHtml : console;
+       // Since all buttons have their text set to the appropriate log level
+       // we can just check them for it via innerText - just need to make it
+       // lowercase
+       target[this.innerText.toLowerCase()](text.value);
+     },
+     i = 0;
+
+   // jQuery works too! The result would be the same if you did
+   // ConsoleLogHTML.connect($("#target"))
+   ConsoleLogHTML.connect(target);
+
+   // Attach our event listeners
+   for (; i < buttons.length; i++) {
+     buttons[i].addEventListener("click", buttonListener);
+   }
+
+   //Create interactive page link
+   document.getElementById("outlink").addEventListener("click", function(e) {
+     window.open(
+       "data:text/html;base64," + base64js.fromByteArray(
+         (new TextEncoderLite('utf-8')).encode(document.firstElementChild.outerHTML)
+       )
+     );
+   });
+
+   // Remove the "A thing to remember!" notice if we're on a data URL
+   if ("data:" === location.protocol) {
+     var outDiv = document.getElementById("outdiv");
+     outDiv.parentElement.removeChild(outDiv);
+     console.clear();
+   }
+
+   // And some basic styling
+   target.style.maxHeight = document.querySelector(".list-group").offsetHeight + "px";
+ </script>
+  <label class="show">
+    <span>Text to output:</span>
+    <input id="text" class="form-control" value="Alorel/console-log-html" />
+  </label>
+  <label class="show">
+    <input type="checkbox" id="onlyConsole" />
+    <span>Don't log to HTML, only the console (skipHtml option)</span>
+  </label>
+  <div class="tbl margin-top">
+    <div>
+      <div>
+        <div class="list-group">
+          <button class="list-group-item list-group-item-default">Log</button>
+          <button class="list-group-item list-group-item-info">Debug</button>
+          <button class="list-group-item list-group-item-success">Info</button>
+          <button class="list-group-item list-group-item-warning">Warn</button>
+          <button class="list-group-item list-group-item-danger">Error</button>
+          <button class="list-group-item list-group-item-default">Clear</button>
+        </div>
+      </div>
+      <div>
+        <ul id="target"></ul>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <footer class="text-center">
+    <small style="display:block">
+            <span>Created by</span>
+            <a href="https://github.com/Alorel">Alorel</a>
+        </small>
+    <small style="display:block">
+            <span>See the source on</span>
+            <a href="https://github.com/Alorel/console-log-html" target="_blank">GitHub</a>
+        </small>
+  </footer>
+  <hr/>
+  <div class="alert alert-warning">
+    <strong>Warning!</strong>
+    <span>This example, like most of the modern web, might not run on old versions of Internet Explorer.</span>
+  </div>
+  <div class="alert alert-info" id="outdiv">
+    <strong>A thing to remember!</strong>
+    <span>This demo runs in an &lt;iframe&gt;, so calling console.log() in your console won't work! Use</span>
+    <a id="outlink" target="_blank" href="javascript:;">this</a>
+    <span>page for that.</span>
+  </div>
+</div>
+ 
  
 </body>
 </html>
