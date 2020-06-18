@@ -1,12 +1,12 @@
 
 
 #myProgress {
-  width: 100%;
+  width: 300;
   background-color: grey;
 }
 
 #myBar {
-  width: 1%;
+  width: 1;
   height: 30px;
   background-color: green;
 }
