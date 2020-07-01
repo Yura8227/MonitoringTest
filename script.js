@@ -1,7 +1,7 @@
 
 
 // define the callAPI function that takes a first name and last name as parameters
-function callAPI(){
+function callWebTestAPI(){
 	// instantiate a headers object
 	var myHeaders = new Headers();
 	// add content type header to object
@@ -28,7 +28,7 @@ function move(){
 		i =1;
 		var elem = document.getElementById("myBar");
 		var width =1;
-		callAPI();			
+		callWebTestAPI();			
 		var id = setInterval(frame,10);
 		function frame(){			
 			if(width >=100)	{
