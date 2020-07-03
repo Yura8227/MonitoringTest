@@ -52,6 +52,8 @@ Your browser does not support the video tag.
     <a href="#">Link 3</a>
   </div>
 </div>
+
+
 <div style="padding-left:30px">
  <table border="0" width="890" height="673" align="left" background="WF-background_rev.jpg">
 	<tr>
@@ -112,7 +114,35 @@ Your browser does not support the video tag.
 	<tr></tr>
  </table>
  </div> 
- 
+ <div id="modal-video" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('modal-video').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <table>
+		<tr>
+			<td><video width="320" height="240" controls>
+			<source src="20200520_162656_HoloLens.mp4" type="video/mp4">  
+			Your browser does not support the video tag.</video><br>
+			<p align='center'>Input IP1-3</p>
+		</td>
+			<td style="padding:40px"> </td>
+			<td><video width="320" height="240" controls>
+				<source src="20200520_162656_HoloLens.mp4" type="video/mp4">  
+				Your browser does not support the video tag.</video><br>
+				<p align='center'>output IP1-3</p></td>
+		</tr>
+        <tr>
+			<td><video width="320" height="240" controls><source src="20200520_162656_HoloLens.mp4" type="video/mp4">  
+			Your browser does not support the video tag.</video><br><p align='center'>Input2 IP1-3</p></td>
+			<td style="padding:40px"> </td>
+			<td><video width="320" height="240" controls>
+				<source src="20200520_162656_HoloLens.mp4" type="video/mp4">  
+				Your browser does not support the video tag.</video><br><p align='center'>output2 IP1-3</p></td>
+		</tr>
+		</table>		
+      </div>
+    </div>
+  </div>
  <div id="modal13" class="w3-modal">
     <div class="w3-modal-content">
       <div class="w3-container">

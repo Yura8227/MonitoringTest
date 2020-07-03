@@ -1,13 +1,13 @@
 
 
 // define the callAPI function that takes a first name and last name as parameters
-function callWebTestAPI(){
+function callWebTestAPI(workflow){
 	// instantiate a headers object
 	var myHeaders = new Headers();
 	// add content type header to object
 	myHeaders.append("Content-Type", "application/json");
 	// using built in JSON utility package turn object to string and store in a variable
-	var raw = JSON.stringify(" ");
+	var raw = JSON.stringify({"firstName":workflow });
 	// create a JSON object with parameters for API call and store in a variable
 	var requestOptions = {
 		method: 'POST',
@@ -60,7 +60,6 @@ window.onclick = function(event) {
     }
   }
 }
-
 
 
 

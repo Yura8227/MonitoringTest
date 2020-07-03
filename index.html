@@ -56,13 +56,17 @@ Total Progress
 <button onclick="move()">RUN</button>
 
 <br><br>
-
-<div style="width:100%" class="dropdown">
-  <button onclick="input_dropbox()" class="dropbtn">Select Input</button>
-  <div id="inputDropdown" class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+<div class="container">
+  <div style="float:left;width:150px;margin-top:6px;">
+    <label for="select_wf">Select Workflow :</label>
+  </div>
+  <div style="float:left;margin-top:6px;">
+    <select name="workflow_select">
+      <option value="wf1">Workflow #1</option>
+      <option value="wf2">Workflow #2</option>
+      <option value="wf3">Workflow #3</option>
+      <option value="wf4">Workflow #4</option>
+    </select>
   </div>
 </div>
 <div style="width:100%">
