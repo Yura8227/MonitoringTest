@@ -8,12 +8,16 @@
 	<title>GK4D AWS UI</title>
 	<link rel="stylesheet" href="styles.css">	
 	<link rel="stylesheet" href="bootstrap.min.css">	
-	<link rel="stylesheet" href="bootstrap-theme.min.css">	
+  <link rel="stylesheet" href="bootstrap-theme.min.css">	
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
 	<script src="script.js"></script>
 </head>
 
 <body>
-<h1>GK4D 비실시간 4D 복원 통합 </h1>
+  <div id="header"><h1>GK4D 비실시간 4D 복원 통합 </h1></div>
+
 
 <!--<p>This is a paragraph.</p>-->
 
@@ -42,8 +46,9 @@ Your browser does not support the video tag.
 	<!-- set button onClick method to call function we defined passing input values as parameters -->
 	<!--<button type="button" onclick="callAPI(document.getElementById('fName').value,document.getElementById('lName').value)">Call API</button>
 </form>-->
-<button><a href="midterm.html">중간평가용테스트 페이지</a></button>
+<div id="nav"><button><a href="midterm.html">중간평가용테스트 페이지</a></button></div>
 
+<div id="progress_monitor">
 <br><br>
 예상수행시간 (--:--:--/--:--:--)
 <br>
@@ -52,192 +57,97 @@ Total Progress
 <div id="myProgress">
   <div id="myBar"></div>
 </div>
+</div>
+<div style="width: 100%;height:50px;float:left;">
 <br>
 <button onclick="move()">RUN</button>
-
-<br><br>
-<div class="container">
-  <div style="float:left;width:150px;margin-top:6px;">
-    <label for="select_wf">Select Workflow :</label>
-  </div>
-  <div style="float:left;margin-top:6px;">
-    <select name="workflow_select">
-      <option value="wf1">Workflow #1</option>
-      <option value="wf2">Workflow #2</option>
-      <option value="wf3">Workflow #3</option>
-      <option value="wf4">Workflow #4</option>
-    </select>
-  </div>
 </div>
-<div style="width:100%">
-<br>
- <button><a href="3dviewer.html">3D model Viewer</a></button>
-<br>
-<br>
+<div style="float:left;width:150px;margin-top:15px;">
+  <label for="select_wf">Select Workflow :</label>
 </div>
-
-<div style="width:100%;padding-left:30px">
- <table border="0" width="890" height="673" align="left" background="WF-background_rev.jpg">
-	<tr>
-	    <td align="center">
-		<span data-toggle="tooltip" title="포인트클라우드 분할 및 재정제">
-		<button id="btn13" class="wf-btn ip11 active" align="center" onclick="">IP 1-3</button></span>&nbsp			
-		</td>
-		<td></td>
-		<td align="center">
-		<span data-toggle="tooltip" title="고성능 깊이 추정 및 포인트클라우드 정합">
-		<button id="btn11" class="wf-btn ip11" align="center">IP 1-1</button></span>					
-		</td>
-		<td></td>
-		<td align="center"><span data-toggle="tooltip" title="사실적/동적 텍스쳐 맵 생성">
-		<button id="btn22" class="wf-btn ip22" align="center">IP 2-2</button></span>			
-		</td>			
-		<td></td>
-		<td align="center"><span data-toggle="tooltip" title="의복 분할 및 리싱/스타일 추출 및 개인화 된 아바타">
-		<button id="btn23" class="wf-btn ip22" align="center">IP 2-3</button></span>			
-		</td>
-	</tr>
-	<tr><br><br><br><br></tr>	
-	<tr>
-	    <td align="center"><span data-toggle="tooltip" title="프레임 간 점군의 비강체 정합">
-		<button id="btn14" class="wf-btn ip11" align="center">IP 1-4</button></span>			
-		</td>
-		<td></td>
-		<td align="center"><span data-toggle="tooltip" title="메시 모델 및 텍스쳐 맵 생성">
-		<button id="btn12" class="wf-btn ip11" align="center">IP 1-2</button></span>			
-		</td>		
-	</tr>
-	<tr><br><br><br><br></tr>	
-	<tr>
-	    <td align="center" ><span data-toggle="tooltip" title="4D 모델 압축(pcd)">
-		<button id="btn31" class="wf-btn ip3" align="center">IP 3-1</button></span>
-		<br><br><br><br>
-		<span data-toggle="tooltip" title="4D 모델 압축(mesh)">
-		<button id="btn32" class="wf-btn ip3" align="center">IP 3-2</button></span>			
-		</td>
-		<td></td>
-		<td align="center"><span data-toggle="tooltip" title="인체 리깅 및 모션 획득/전이">
-		<button id="btn21" class="wf-btn ip33" align="center">IP 2-1</button></span>
-		<br><br><br><br><br><br><br><br>
-		</td>
-		<td></td>
-		<td align="center"><span data-toggle="tooltip" title="페이스 리깅">
-		<button id="btn24" class="wf-btn ip33" align="center">IP 2-4</button></span>
-			<br><br><br><br><br><br><br><br>
-		</td>
-		<td></td>
-		<td align="center"><span data-toggle="tooltip" title="사실적 렌더링">
-		<button id="btn33" class="wf-btn ip33" align="center">IP 3-3</button></span>
-		<br><br><br><br><br><br><br><br>
-		</td>
-	</tr>
-	<tr></tr>	
-	<tr></tr>
-	<tr></tr>
- </table>
- </div>
- 
+<div style="float:left;margin-top:15px;width:80%">
+  <select name="workflow_select">
+    <option value="wf1">Workflow #1</option>
+    <option value="wf2">Workflow #2</option>
+    <option value="wf3">Workflow #3</option>
+    <option value="wf4">Workflow #4</option>
+  </select>
+</div>
+<!--<iframe src="WF_TABLE.html" style="width: 100%;height:700px;border: 0px;"></iframe>-->
+<div style="float:left;width:100%;height:700px;border:0px;margin-top:20px">  
+<table border="0" width="890" height="673" align="left"><!--</table> background="WF-background_rev.jpg">-->
+<tr>
+    <td align="center">
+    <span data-toggle="tooltip" title="포인트클라우드 분할 및 재정제">   
+<label class="btn-label ip11" for="ip1-3">IP1-3</label><input type="checkbox" id="btn13" value="ip1-3"><!--class="visually-hidden" -->
+</span>&nbsp			
+    </td>
+    <td></td>
+    <td align="center">
+    <span data-toggle="tooltip" title="고성능 깊이 추정 및 포인트클라우드 정합">
+     <label class="btn-label ip11" for="ip1-1">IP1-1</label><input type="checkbox" id="btn11" value="ip1-1"><!--class="visually-hidden" --></span>					
+    </td>
+    <td></td>
+    <td align="center"><span data-toggle="tooltip" title="사실적/동적 텍스쳐 맵 생성">
+    <label class="btn-label ip22" for="ip2-2">IP2-2</label><input type="checkbox" id="btn22" value="ip2-2"><!--class="visually-hidden" -->       
+    </td>			
+    <td></td>
+    <td align="center"><span data-toggle="tooltip" title="의복 분할 및 리싱/스타일 추출 및 개인화 된 아바타">
+    <label class="btn-label ip22" for="ip2-3">IP2-3</label><input type="checkbox" id="btn23" value="ip2-3"><!--class="visually-hidden" -->       
+    </td>
+</tr>
+<tr></tr>	
+<tr>
+    <td align="center"><span data-toggle="tooltip" title="프레임 간 점군의 비강체 정합">
+     <label class="btn-label ip11" for="ip1-4">IP1-4</label><input type="checkbox" id="btn14" value="ip1-4"><!--class="visually-hidden" -->        
+    </td>
+    <td></td>
+    <td align="center"><span data-toggle="tooltip" title="메시 모델 및 텍스쳐 맵 생성">
+     <label class="btn-label ip11" for="ip1-3">IP1-2</label><input type="checkbox" id="btn12" value="ip1-2"><!--class="visually-hidden" -->        
+    </td>		
+</tr>
+<tr></tr>	
+<tr>
+    <td align="center" ><span data-toggle="tooltip" title="4D 모델 압축(pcd)">
+     <label class="btn-label ip3" for="ip3-1">IP3-1</label><input type="checkbox" id="btn31" value="ip3-1"><!--class="visually-hidden" -->        
+    <br><br><br><br>
+    <span data-toggle="tooltip" title="4D 모델 압축(mesh)">
+    <label class="btn-label ip3" for="ip3-2">IP3-2</label><input type="checkbox" id="btn32" value="ip3-2"><!--class="visually-hidden" -->       
+    </td>
+    <td></td>
+    <td align="center"><span data-toggle="tooltip" title="인체 리깅 및 모션 획득/전이">
+    <label class="btn-label ip33" for="ip2-1">IP2-1</label><input type="checkbox" id="btn21" value="ip2-1"><!--class="visually-hidden" -->              
+    </td>
+    <td></td>
+    <td align="center"><span data-toggle="tooltip" title="페이스 리깅">
+     <label class="btn-label ip33" for="ip2-4">IP2-4</label><input type="checkbox" id="btn24" value="ip2-4"><!--class="visually-hidden" -->                  
+    </td>
+    <td></td>
+    <td align="center"><span data-toggle="tooltip" title="사실적 렌더링">
+    <label class="btn-label ip33" for="ip3-3">IP3-3</label><input type="checkbox" id="btn33" value="ip3-3"><!--class="visually-hidden" -->
+    </td>
+</tr>
+<tr></tr>	
+<tr></tr>
+<tr></tr>
+</table>
+</div>
+ <div style="width: 100%;">
  <br>
- 
- 
- <!-- reference by https://alorel.github.io/console-log-html/-->
- <div class="container"> 
- <script>
-  // The text we're logging
-   var text = document.getElementById("text"),
-     // The checkbox
-     onlyConsole = document.getElementById("onlyConsole"),
-     // The target <ul>
-     target = document.getElementById("target"),
-     // The buttons on the left
-     buttons = document.querySelectorAll(".list-group-item"),
-     // Our button click listener
-     buttonListener = function() {
-       var target = onlyConsole.checked ? console.skipHtml : console;
-       // Since all buttons have their text set to the appropriate log level
-       // we can just check them for it via innerText - just need to make it
-       // lowercase
-       target[this.innerText.toLowerCase()](text.value);
-     },
-     i = 0;
-
-   // jQuery works too! The result would be the same if you did
-   // ConsoleLogHTML.connect($("#target"))
-   ConsoleLogHTML.connect(target);
-
-   // Attach our event listeners
-   for (; i < buttons.length; i++) {
-     buttons[i].addEventListener("click", buttonListener);
-   }
-
-   //Create interactive page link
-   document.getElementById("outlink").addEventListener("click", function(e) {
-     window.open(
-       "data:text/html;base64," + base64js.fromByteArray(
-         (new TextEncoderLite('utf-8')).encode(document.firstElementChild.outerHTML)
-       )
-     );
-   });
-
-   // Remove the "A thing to remember!" notice if we're on a data URL
-   if ("data:" === location.protocol) {
-     var outDiv = document.getElementById("outdiv");
-     outDiv.parentElement.removeChild(outDiv);
-     console.clear();
-   }
-
-   // And some basic styling
-   target.style.maxHeight = document.querySelector(".list-group").offsetHeight + "px";
- </script>
-  <label class="show">
-    <span>Text to output:</span>
-    <input id="text" class="form-control" value="Alorel/console-log-html" />
-  </label>
-  <label class="show">
-    <input type="checkbox" id="onlyConsole" />
-    <span>Don't log to HTML, only the console (skipHtml option)</span>
-  </label>
-  <div class="tbl margin-top">
-    <div>
-      <div>
-        <div class="list-group">
-          <button class="list-group-item list-group-item-default">Log</button>
-          <button class="list-group-item list-group-item-info">Debug</button>
-          <button class="list-group-item list-group-item-success">Info</button>
-          <button class="list-group-item list-group-item-warning">Warn</button>
-          <button class="list-group-item list-group-item-danger">Error</button>
-          <button class="list-group-item list-group-item-default">Clear</button>
-        </div>
-      </div>
-      <div>
-        <ul id="target"></ul>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <footer class="text-center">
-    <small style="display:block">
-            <span>Created by</span>
-            <a href="https://github.com/Alorel">Alorel</a>
-        </small>
-    <small style="display:block">
-            <span>See the source on</span>
-            <a href="https://github.com/Alorel/console-log-html" target="_blank">GitHub</a>
-        </small>
-  </footer>
-  <hr/>
-  <div class="alert alert-warning">
-    <strong>Warning!</strong>
-    <span>This example, like most of the modern web, might not run on old versions of Internet Explorer.</span>
-  </div>
-  <div class="alert alert-info" id="outdiv">
-    <strong>A thing to remember!</strong>
-    <span>This demo runs in an &lt;iframe&gt;, so calling console.log() in your console won't work! Use</span>
-    <a id="outlink" target="_blank" href="javascript:;">this</a>
-    <span>page for that.</span>
-  </div>
+ <button><a href="3dviewer.html">3D model Viewer</a></button>
+ <br>
 </div>
- 
+
+ <script>
+  $('body').terminal({
+      hello: function(what) {
+          this.echo('Hello, ' + what +
+                    '. Wellcome to this terminal.');
+      }
+  }, {
+      greetings: 'GK4D 4D Reconstruction Terminal'
+  });
+  </script>
  
 </body>
 </html>
