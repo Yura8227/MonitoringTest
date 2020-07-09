@@ -1,0 +1,226 @@
+
+
+#myProgress {
+  width: 100%;
+  background-color: grey;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: green;
+}
+
+
+.wf-btn {
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  padding: 24px 35px;  
+  cursor: pointer;
+  font-size: 28px;
+}
+
+
+/* Green */
+.ip11 {
+  border-color: #4CAF50;
+  color: green;
+}
+
+.ip11:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Blue */
+.ip22 {
+  border-color: #2196F3;
+  color: dodgerblue
+}
+
+.ip22:hover {
+  background: #2196F3;
+  color: white;
+}
+
+/* Orange */
+.ip3 {
+  border-color: #ff9800;
+  color: orange;
+}
+
+.ip3:hover {
+  background: #ff9800;
+  color: white;
+}
+
+/* Red */
+.ip33 {
+  border-color: #f44336;
+  color: red
+}
+
+.ip33:hover {
+  background: #f44336;
+  color: white;
+}
+
+/* Gray */
+.ipdefault {
+  border-color: #e7e7e7;
+  color: black;
+}
+
+.ipdefault:hover {
+  background: #e7e7e7;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;)
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+.margin-top {
+  margin-top: 1em;
+}
+
+#outlink {
+  text-decoration: underline;
+}
+
+#target {
+  list-style: none;
+  -webkit-padding-start: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-before: 1em;
+  border: 1px solid #000;
+  overflow-y: auto;
+  width: 100%;
+  background: #333;
+  color: #fff;
+}
+
+.tbl {
+  display: table;
+  width:100%;
+  >* {
+	display: table-row;
+	>* {
+	  display: table-cell;
+	  
+	  &:last-child {
+		width:100%
+	  }
+	}
+  }
+}
+
+.container {
+  padding-top: 1em;
+}
