@@ -28,7 +28,7 @@ function CallWFAPIGateWay(workflow){
 	// add content type header to object
 	myHeaders.append("Content-Type", "application/json");
 	// using built in JSON utility package turn object to string and store in a variable
-	var raw = JSON.stringify({"firstName":workflow });
+	var raw = JSON.stringify({"workflow":workflow });
 	// create a JSON object with parameters for API call and store in a variable
 	var requestOptions = {
 		method: 'POST',
@@ -37,7 +37,7 @@ function CallWFAPIGateWay(workflow){
 		redirect: 'follow'
 	};
 	// make API call with parameters and use promises to get response
-	fetch("https://lpb2pszwab.execute-api.ap-northeast-2.amazonaws.com/dev", requestOptions)
+	fetch("https://04yuk3lti5.execute-api.ap-northeast-2.amazonaws.com/beta", requestOptions)
 	.then(response => response.text())
 	.then(result => alert(JSON.parse(result).body))
 	.catch(error => console.log('error', error));			
@@ -91,3 +91,5 @@ window.onclick = function(event) {
     }
   }
 }
+
+
