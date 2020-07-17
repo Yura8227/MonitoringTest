@@ -82,13 +82,13 @@ Your browser does not support the video tag.
 		</td>
 		<td></td>
 		<td align="center"><span data-toggle="tooltip" title="메시 모델 및 텍스쳐 맵 생성">
-		<button id="btn12" class="wf-btn ip11" align="center">IP 1-2</button></span>			
+		<button id="btn12" class="wf-btn ip11" align="center" onclick="document.getElementById('modal-video12').style.display='block'">IP 1-2</button></span>			
 		</td>		
 	</tr>
 	<tr><br><br><br><br></tr>	
 	<tr>
 	    <td align="center" ><span data-toggle="tooltip" title="4D 모델 압축(pcd)">
-		<button id="btn31" class="wf-btn ip3" align="center" onclick="document.getElementById('modal-video').style.display='block'">IP 3-1</button></span>
+		<button id="btn31" class="wf-btn ip3" align="center" onclick="document.getElementById('modal-video31').style.display='block'">IP 3-1</button></span>
 		<br><br><br><br>
 		<span data-toggle="tooltip" title="4D 모델 압축(mesh)">
 		<button id="btn32" class="wf-btn ip3" align="center">IP 3-2</button></span>			
@@ -115,24 +115,36 @@ Your browser does not support the video tag.
  </table>
  </div> 
 
-  <div id="modal-video" class="w3-modal">
+  <div id="modal-video31" class="w3-modal">
     <div class="w3-modal-content">		
       <div class="w3-container">		  
-        <span onclick="document.getElementById('modal-video').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-        <table>
-		<tr>
-			<td><video id="video_in1" width="320" height="240" controls>
-			<source src="IP3-1_INP.mp4" type="video/mp4">
+        <span onclick="document.getElementById('modal-video31').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+		<p align='center'><video id="video_in31" width="640" height="480" controls>
+			<source src="IP3-1.mp4" type="video/mp4">
 			Your browser does not support the video tag.</video><br>
-			<p align='center'>Input IP1-3</p>
-		</td>
-			<td style="padding:40px"> </td>
-			<td><video width="320" height="240" controls>
-				<source src="IP3-1_OUT.mp4" type="video/mp4">  
+			IP3-1 Video Deomo</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-video12" class="w3-modal">
+    <div class="w3-modal-content">		
+      <div class="w3-container">		  
+        <span onclick="document.getElementById('modal-video12').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+		<table>
+			<tr>
+				<td><video id="video_in12" width="320" height="240" controls>
+				<source src="IP1-2_INP.mp4" type="video/mp4">
 				Your browser does not support the video tag.</video><br>
-				<p align='center'>output IP1-3</p></td>
-		</tr>       
-		</table>		
+				<p align='center'>Input IP1-2</p>
+			</td>
+				<td style="padding:40px"> </td>
+				<td><video width="320" height="240" controls>
+					<source src="IP1-2_OUT.mp4" type="video/mp4">  
+					Your browser does not support the video tag.</video><br>
+					<p align='center'>output IP1-2</p></td>
+			</tr>       
+			</table>		
       </div>
     </div>
   </div>
@@ -146,44 +158,44 @@ Your browser does not support the video tag.
 				<table>
 					<tr>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1c1" width="160" height="120" autoplay>
 								<source src="Pod1_Color.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>
 						</td>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1c2" width="160" height="120" autoplay>
 								<source src="Pod2_Color.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>							
 						</td>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1c3" width="160" height="120" autoplay>
 								<source src="Pod3_Color.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>							
 						</td>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1c4" width="160" height="120" autoplay>
 								<source src="Pod4_Color.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>							
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1c5" width="160" height="120" autoplay>
 								<source src="Pod5_Color.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>
 						</td>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1c6" width="160" height="120" autoplay>
 								<source src="Pod6_Color.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>
 						</td>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1c7" width="160" height="120" autoplay>
 								<source src="Pod7_Color.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>
 						</td>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1c8" width="160" height="120" autoplay>
 								<source src="Pod8_Color.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>
 						</td>
@@ -201,44 +213,44 @@ Your browser does not support the video tag.
 			<table>
 				<tr>
 					<td>
-						<video id="video_in1" width="160" height="120" autoplay>
+						<video id="video_in1m1" width="160" height="120" autoplay>
 							<source src="Pod1_Mask.mp4" type="video/mp4">Your browser does not support the video tag.
 						</video>
 					</td>
 					<td>
-						<video id="video_in1" width="160" height="120" autoplay>
+						<video id="video_in1m2" width="160" height="120" autoplay>
 							<source src="Pod2_Mask.mp4" type="video/mp4">Your browser does not support the video tag.
 						</video>							
 					</td>
 					<td>
-						<video id="video_in1" width="160" height="120" autoplay>
+						<video id="video_in1m3" width="160" height="120" autoplay>
 							<source src="Pod3_Mask.mp4" type="video/mp4">Your browser does not support the video tag.
 						</video>							
 					</td>
 					<td>
-						<video id="video_in1" width="160" height="120" autoplay>
+						<video id="video_in1m4" width="160" height="120" autoplay>
 							<source src="Pod4_Mask.mp4" type="video/mp4">Your browser does not support the video tag.
 						</video>							
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<video id="video_in1" width="160" height="120" autoplay>
+						<video id="video_in1m5" width="160" height="120" autoplay>
 							<source src="Pod5_Mask.mp4" type="video/mp4">Your browser does not support the video tag.
 						</video>
 					</td>
 					<td>
-						<video id="video_in1" width="160" height="120" autoplay>
+						<video id="video_in1m6" width="160" height="120" autoplay>
 							<source src="Pod6_Mask.mp4" type="video/mp4">Your browser does not support the video tag.
 						</video>
 					</td>
 					<td>
-						<video id="video_in1" width="160" height="120" autoplay>
+						<video id="video_in1m7" width="160" height="120" autoplay>
 							<source src="Pod7_Mask.mp4" type="video/mp4">Your browser does not support the video tag.
 						</video>
 					</td>
 					<td>
-						<video id="video_in1" width="160" height="120" autoplay>
+						<video id="video_in1m8" width="160" height="120" autoplay>
 							<source src="Pod8_Mask.mp4" type="video/mp4">Your browser does not support the video tag.
 						</video>
 					</td>
@@ -253,44 +265,44 @@ Your browser does not support the video tag.
 				<table>
 					<tr>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1d1" width="160" height="120" autoplay>
 								<source src="Pod1_Depth.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>
 						</td>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1d2" width="160" height="120" autoplay>
 								<source src="Pod2_Depth.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>							
 						</td>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1d3" width="160" height="120" autoplay>
 								<source src="Pod3_Depth.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>							
 						</td>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1d4" width="160" height="120" autoplay>
 								<source src="Pod4_Depth.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>							
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1d5" width="160" height="120" autoplay>
 								<source src="Pod5_Depth.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>
 						</td>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1d6" width="160" height="120" autoplay>
 								<source src="Pod6_Depth.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>
 						</td>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1d7" width="160" height="120" autoplay>
 								<source src="Pod7_Depth.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>
 						</td>
 						<td>
-							<video id="video_in1" width="160" height="120" autoplay>
+							<video id="video_in1d8" width="160" height="120" autoplay>
 								<source src="Pod8_Depth.mp4" type="video/mp4">Your browser does not support the video tag.
 							</video>
 						</td>
